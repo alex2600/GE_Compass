@@ -1,0 +1,143 @@
+body {
+	background-color: #444;
+	font-family: sans-serif;
+	color: #eee;
+	margin: 0; padding: 0;
+}
+
+h1 {
+	background-color: #333;
+	border-bottom: 1px solid #777;
+	margin: 0 0 2em 0;
+	padding: .3em .6em;
+	font-size: 10pt;
+	position: fixed;
+	width: 100%;
+	z-index: 22;
+}
+
+.text-right {
+	text-align: right;
+}
+.mono {
+	font-family: monospace;
+}
+
+
+#compass {
+	position: relative;
+	padding: 2.5em .75em .75em .75em ;
+}
+
+
+#compass-header {
+	position: relative;
+	width: 100%;
+	height: 2em;
+	text-align: center;
+}
+#compass-header .right {
+	position: absolute;
+	right: 0em;
+}
+#compass-header .left {
+	position: absolute;
+	left: 0em;
+}
+#compass-header .center {
+	display: inline;
+}
+
+
+
+#compass-toggler {
+	font-size: 120%;
+}
+
+
+#compass-marker {
+	position: absolute;
+	width: inherit;
+	z-index: 10;
+	left: center;
+	top: center;
+}
+#compass-marker-needle {
+	height: inherit;
+	min-height: 3em;
+	width: 1px;
+	background-color: #fa0;
+	margin: 0 auto;
+	opacity: .6;
+}
+
+#compass-img {
+	transform: translate3d(0,0,0);
+	-webkit-transform:translate3d(0,0,0);
+	
+	width: 100%;
+	max-width: 512px;
+	margin: 0 auto;
+}
+
+#compass-img img {
+	width: inherit;
+	height: inherit;
+	-webkit-transform: rotate(0deg);
+}
+	
+#compass-heading {
+	background-color: #777;
+	padding: .4em;
+	border-radius: 1em;
+	width: 4em;
+	text-align: center;
+	box-shadow: -3px -2px 5px #333 inset;
+}
+	
+
+
+#log {
+	font-family: monospace;
+	font-size: 11px;
+	background: #333;
+	padding: 1em;
+	margin: 1em 0;
+	border-top: 1px dotted #777;
+}
+	
+	
+#menu {
+	list-style-type: none;
+	position: fixed;
+	bottom: -8em;
+	-webkit-transition: bottom .25s ease;	
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	height: auto;
+	background: #111;
+	color: #eee;
+	opacity: .9;
+	visibility: hidden;
+}
+#menu li {
+	width: 33%;
+	float: left;
+	text-align: center;
+}
+#menu li a {
+	padding: 1em 0;
+	outline: 1px solid #ccc;
+	display: block;
+}
+
+#menu.showing {
+	visibility: visible;
+	bottom: 0;
+	-webkit-transition: bottom .25s ease;
+}
+
+
+
+
