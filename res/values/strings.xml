@@ -3,6 +3,7 @@
     <string name="app_name">GE_Compass</string>
     <string name="hello_world">Hello world!</string>
     <string name="menu_settings">Settings</string>
-    <string name="title_activity_compass">CompassActivity</string>
+<!--     <string name="title_activity_compass">CompassActivity</string> -->
+    <string name="title_activity_compass">GE_Compass</string>
 
 </resources>
