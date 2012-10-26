@@ -1,5 +1,5 @@
 body {
-	background-color: #444;
+	background: #444 url(../gfx/pattern.png) repeat;
 	font-family: sans-serif;
 	color: #eee;
 	margin: 0; padding: 0;
@@ -65,7 +65,7 @@ h1 {
 #compass-marker-needle {
 	height: inherit;
 	min-height: 3em;
-	width: 1px;
+	width: 2px;
 	background-color: #fa0;
 	margin: 0 auto;
 	opacity: .6;
