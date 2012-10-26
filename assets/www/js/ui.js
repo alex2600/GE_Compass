@@ -1,6 +1,15 @@
-var DBG = false;
+var DBG = true;
 function log(line) {
-	if(DBG)	$("#log").prepend("<div>"+line+"</div>");
+	if(DBG)	{
+		var logElem = $("#log");
+		console.debug(logElem.length === 0);
+		if(logElem.length === 0) {
+			logElem = $("<div id='log'></div>");
+			$("#compass").after(logElem);
+		}
+		console.debug(logElem);
+		logElem.prepend("<div>"+line+"</div>");
+	}
 }
 
 var COMPASS = {
@@ -43,6 +52,12 @@ var COMPASS = {
 		 , val = COMPASS.oValue
 		;
 		
+		// err handling
+		if(rotNext < 0 || rotNext >= 360) {
+			log("compass error: rotation is " + rotNext);
+			return;
+		}
+		
 		rotDiff = COMPASS.getRotDiff(rotNext, rotCur);
 		rotVec = rotVec * rotDamp + (rotDiff / 360) * COMPASS.rotMax;
 		rotDir = rotVec < 0 ? -1 : 1;
@@ -63,12 +78,12 @@ var COMPASS = {
 	},
 	
 	updateErr : function(err) {
-		log("compass err: "+err.code);
-		COMPASS.stop();
+		log("compass err code: "+err.code);
+//		COMPASS.stop();
 	},
 	
 	start : function() {
-		log("compass starting...");
+//		log("compass starting...");
 		
 		COMPASS.oImg = $("#compass-img img");
 		COMPASS.oValue = $("#compass-heading-value");
@@ -101,9 +116,9 @@ var initNeedle = function() {
 	  , h = img.height()
 	  , needle = $("#compass-marker-needle") 
 	;
-	console.log(needle);
-	console.log(w);
-	console.log(h);
+//	console.log(needle);
+//	console.log(w);
+//	console.log(h);
 	needle.height(h);
 };
 
@@ -117,7 +132,7 @@ var initNeedle = function() {
 var init = function() {
 	COMPASS.start();
 	initNeedle();
-	document.addEventListener("menubutton", toggleMenu, false);	
+//	document.addEventListener("menubutton", toggleMenu, false);	
 };
 
 $(document).ready(function() {
