@@ -1,7 +1,6 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.gorillaeis.android.ge_compass"
+<manifest package="com.gorillaeis.android.ge_compass"
     android:versionCode="1"
-    android:versionName="1.0" >
+    android:versionName="1.1" xmlns:android="http://schemas.android.com/apk/res/android">
 
     <uses-sdk
         android:minSdkVersion="8"
