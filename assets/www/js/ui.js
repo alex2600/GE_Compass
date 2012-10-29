@@ -1,4 +1,4 @@
-var DBG = true;
+var DBG = false;
 function log(line) {
 	if(DBG)	{
 		var logElem = $("#log");
