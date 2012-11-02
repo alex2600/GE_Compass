@@ -1,0 +1,9 @@
+== GE_Compass ==
+''A simple Compass for mobile devices''
+
+Yes it is a compass. What else can I say?
+
+It is written with the [http://phonegap.com Phonegap] API (aka Cordova 2.1.0), so it should run on any 
+device [http://phonegap.com/about/feature supported by phonegap].
+
+It is available for Android on [https://play.google.com/store/apps/details?id=com.gorillaeis.android.ge_compass Google Play].
